@@ -20,13 +20,13 @@ function App() {
         dispatch(changeAuthStatusTC());
     }, [])
 
-    if (!isAuthorized) {
-        return (
-            <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <CircularProgress />
-            </div>
-        )
-    }
+    // if (!isAuthorized) {
+    //     return (
+    //         <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    //             <CircularProgress />
+    //         </div>
+    //     )
+    // }
     return (
         <div className="container lg bg-stone-100 min-h-screen">
             <ErrorSnackBar />

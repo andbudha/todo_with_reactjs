@@ -23,7 +23,7 @@ export const Todolists = () => {
             dispatch(changeAppStatusAC('idle'))
         }
         dispatch(setListsTC());
-    }, [])
+    }, [dispatch, isLoggedIn])
 
     //task adding function
     const addTask = useCallback((listID: string, inputValue: string) => {

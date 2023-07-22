@@ -40,7 +40,7 @@ function App() {
                 <Route path={'/'} element={<Todolists />} />
                 <Route path={'/login'} element={<Login />} />
                 <Route path={'/404'} element={<PageNotFound />} />
-                <Route path={'/*'} element={<Navigate to={'/404'} />} />
+                <Route path={'/*'} element={<Navigate to={'/login'} />} />
             </Routes>
         </div>
     );

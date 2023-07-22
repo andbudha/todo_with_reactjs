@@ -34,45 +34,45 @@ export const Todolist = memo((props: TodolistPropsType) => {
     //task removing func
     const taskRemovingHandler = useCallback((taskID: string) => {
         props.removeTask(props.todolistID, taskID);
-    }, [props.removeTask, props.todolistID]);
+    }, [dispatch]);
 
     //changing task status func
     const changeStatusHandler = useCallback((taskID: string, status: TaskStatus) => {
         props.changeStatus(props.todolistID, taskID, status);
-    }, [props.changeStatus, props.todolistID]);
+    }, [dispatch]);
 
     //task title changing func
     const changeTaskTitleHandler = useCallback((taskID: string, newTitle: string) => {
         props.changeTaskTitle(props.todolistID, taskID, newTitle);
-    }, [props.changeTaskTitle, props.todolistID]);
+    }, [dispatch]);
 
     //task-filtering functions
     const filterAllHandler = useCallback((buttonName: FilterType) => {
         props.filterTasks(props.todolistID, buttonName);
-    }, [props.filterTasks, props.todolistID]);
+    }, [dispatch]);
 
     const filterActiveHandler = useCallback((buttonName: FilterType) => {
         props.filterTasks(props.todolistID, buttonName);
-    }, [props.filterTasks, props.todolistID]);
+    }, [dispatch]);
 
     const filterCompleteHandler = useCallback((buttonName: FilterType) => {
         props.filterTasks(props.todolistID, buttonName);
-    }, [props.filterTasks, props.todolistID]);
+    }, [dispatch]);
 
     //master-input helper func
     const inputValueCatchingHandler = useCallback((inputValue: string) => {
         props.addTask(props.todolistID, inputValue);
-    }, [props.addTask, props.todolistID]);
+    }, [dispatch]);
 
     //list title changing func
     const changeListTitleHandler = useCallback((newTitle: string) => {
         props.changeListTitle(props.todolistID, newTitle);
-    }, [props.changeListTitle, props.todolistID]);
+    }, [dispatch]);
 
     //list removing handler
     const removeListHandler = useCallback(() => {
         props.removeList(props.todolistID);
-    }, [props.removeList, props.todolistID]);
+    }, [dispatch]);
 
     //filter conditioning
 

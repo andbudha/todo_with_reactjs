@@ -20,13 +20,14 @@ function App() {
         dispatch(changeAuthStatusTC());
     }, [])
 
-    // if (!isAuthorized) {
-    //     return (
-    //         <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-    //             <CircularProgress />
-    //         </div>
-    //     )
-    // }
+    if (!isAuthorized) {
+        return (
+            <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <CircularProgress />
+            </div>
+        )
+    }
+
     return (
         <div className="container lg bg-stone-100 min-h-screen">
             <ErrorSnackBar />
@@ -40,7 +41,7 @@ function App() {
                 <Route path={'/'} element={<Todolists />} />
                 <Route path={'/login'} element={<Login />} />
                 <Route path={'/404'} element={<PageNotFound />} />
-                <Route path={'/*'} element={<Navigate to={'/login'} />} />
+                <Route path={'/*'} element={<Navigate to={'/404'} />} />
             </Routes>
         </div>
     );

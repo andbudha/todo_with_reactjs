@@ -40,6 +40,8 @@ export const changeAuthStatusTC = () => {
         dispatch(changeAppStatusAC('loading'));
         loginAPI.authMe()
             .then(response => {
+                console.log(response);
+
                 if (response.data.resultCode === 0) {
                     dispatch(changeLoginStatusAC(true));
                     dispatch(changeAppStatusAC('succeeded'));

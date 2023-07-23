@@ -24,3 +24,6 @@ export const useAppDispatch = () => useDispatch<AppDispatchType>();
 export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));
 
 export type AppRootStateType = ReturnType<typeof rootReducer>
+
+//@ts-ignore
+window.store = store;

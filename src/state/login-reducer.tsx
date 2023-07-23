@@ -81,7 +81,7 @@ export const logOutTC = () => {
                 if (response.data.resultCode === 0) {
                     dispatch(changeLoginStatusAC(false));
                     dispatch(changeAppStatusAC('succeeded'));
-                    dispatch(clearListsAC())
+                    dispatch(clearListsAC());
                 } else {
                     handleAppServerError(response.data, dispatch);
                 }

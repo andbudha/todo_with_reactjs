@@ -109,8 +109,8 @@ export const setListsTC = () => {
                     dispatch(changeAppStatusAC('idle'));
                 }
             })
-            .catch(error => {
-                dispatch(setErrorAC(error.message));
+            .catch((err: AxiosError<{ message: string }>) => {
+                // dispatch(setErrorAC(error.message));
                 dispatch(changeAppStatusAC('failed'));
             })
     }

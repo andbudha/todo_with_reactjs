@@ -27,7 +27,6 @@ function App() {
             </div>
         )
     }
-
     return (
         <div className="container lg bg-stone-100 min-h-screen">
             <ErrorSnackBar />
@@ -43,6 +42,14 @@ function App() {
                 <Route path={'/404'} element={<PageNotFound />} />
                 <Route path={'/*'} element={<Navigate to={'/404'} />} />
             </Routes>
+            {/* <Routes>
+                <Route path={'/'}  >
+                    <Route index element={<Todolists />} />
+                    <Route path={'login'} element={<Login />} />
+                    <Route path={'404'} element={<PageNotFound />} />
+                    <Route path={'*'} element={<Navigate to={'/404'} />} />
+                </Route>
+            </Routes> */}
         </div>
     );
 }
